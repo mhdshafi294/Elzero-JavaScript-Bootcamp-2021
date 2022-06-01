@@ -3,29 +3,45 @@
 */
 
 /*
-  Number Challenge
+  If Condition Challenge
 */
 
-let a = 100;
-let b = 2_00.5;
-let c = 1e2;
-let d = 2.4;
+let a = 10;
 
-// Find Smallest Number In All Variables And Return Integer
-console.log(parseInt(Math.min(a, b, c, d)));
+if (a < 10) {
+    console.log(10);
+} else if (a >= 10 && a <= 40) {
+    console.log("10 To 40");
+} else if (a > 40) {
+    console.log("> 40");
+} else {
+    console.log("Unknown");
+}
 
-// Use Variables a + d One Time To Get The Needed Output
-console.log(a ** parseInt(d)); // 10000
+// Write Previous Condition With Ternary If Syntax
 
-// Get Integer "2" From d Variable With 4 Methods
-console.log(Math.floor(d));
-console.log(parseInt(d));
-console.log(Math.trunc(d));
-console.log(Math.round(d));
-
-// Use Variables b + d To Get This Valus
-console.log((Math.floor(b) / Math.ceil(d)).toFixed(2)); // 66.67 => String
-console.log(parseFloat((Math.floor(b) / Math.ceil(d)).toFixed(2))); // 67.67 => Number
+a < 10 ? console.log(10) :
+    a >= 10 && a <= 40 ? console.log("10 To 40") :
+    a > 40 ? console.log("Larger Than 40") :
+    console.log("Unknown");
 
 
+let st = "Elzero Web School";
 
+// W Position May Change
+
+if (st.charAt(st.toLowerCase().indexOf("w")).toLowerCase() === "w") {
+    console.log("Good1");
+}
+
+if (st !== "string") {
+    console.log("Good2");
+}
+
+if (typeof(st.length) === "number") {
+    console.log("Good3");
+}
+
+if (st.substring(0, 6).repeat(2) === "ElzeroElzero") {
+    console.log("Good4");
+}
