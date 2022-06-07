@@ -11,6 +11,13 @@ let letter = "a";
 // "1 => Sayed"
 // "2 => Mahmoud"
 
+while (index < friends.length) {
+    if (typeof(friends[index]) !== "number" && !(friends[index].toLowerCase().startsWith(letter))) {
+        console.log(`${++counter} => ${friends[index]}`)
+    }
+    index++
+}
+
 //Answer
 // for (let element of friends) {
 //     if (typeof(element) === "number") {
@@ -24,12 +31,12 @@ let letter = "a";
 //     }
 // }
 
-for (let i = index; i < friends.length; i++) {
-    if (typeof(friends[i]) === "number") {
-        continue;
-    } else if (friends[i].toLowerCase().startsWith(letter)) {
-        continue;
-    } else {
-        console.log(`${++counter} => ${friends[i]}`)
-    }
-}
+// for (let i = index; i < friends.length; i++) {
+//     if (typeof(friends[i]) === "number") {
+//         continue;
+//     } else if (friends[i].toLowerCase().startsWith(letter)) {
+//         continue;
+//     } else {
+//         console.log(`${++counter} => ${friends[i]}`)
+//     }
+// }
